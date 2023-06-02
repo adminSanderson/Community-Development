@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Проекты</h1>
+<ul class="list-group">
+    {% for project in projects %}
+    <li class="list-group-item">
+        <h5>{{ project[0] }}</h5>
+        <p><strong>Концепция:</strong> {{ project[1] }}</p>
+        <p><strong>Целевая аудитория:</strong> {{ project[2] }}</p>
+        <a href="/project/{{ loop.index }}">Продолжить!</a>
+    </li>
+    <hr class="hr hr-blurry" />
+    {% endfor %}
+</ul>
+{% endblock %}

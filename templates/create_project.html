@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Создайте новый проект!</h1>
+<form method="POST" action="/create_project">
+    <div class="form-group">
+        <label for="name">Название проекта:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="concept">Общая концепция:</label>
+        <textarea class="form-control" rows="5" id="concept" name="concept" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="audience">Целевая аудитория:</label>
+        <textarea class="form-control" rows="3" id="audience" name="audience" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="benefits">Польза проекта:</label>
+        <textarea class="form-control" rows="5" id="benefits" name="benefits" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Project</button>
+</form>
+{% endblock %}
