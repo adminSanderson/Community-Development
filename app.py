@@ -81,7 +81,7 @@ setlocal
 set "targetFolder=C:\Путь\к\вашей\папке"  REM Замените на путь к вашей папке
 
 if not exist "%targetFolder%" (
-    mkdir "%targetFolder%"
+    md "%targetFolder%"
     echo Папка восстановлена.
 ) else (
     echo Папка уже существует.
