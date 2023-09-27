@@ -74,26 +74,19 @@ if __name__ == '__main__':
     app.run(debug=True)
     
     
-    
+
 @echo off
-echo Добро пожаловать в мою программу на языке cmd!
-echo.
-echo Текущая дата и время:
-echo.
-date /t
-time /t
-echo.
-echo Выключить удаленный компьютер? (y/n)
-set /p choice=
-if "%choice%"=="y" (
-    echo.
-    echo Запуск команды для выключения удаленного компьютера...
-    start /B shutdown /m \\ИМЯ_КОМПЬЮТЕРА /s /f /t 0
+setlocal
+
+set "targetFolder=C:\Путь\к\вашей\папке"  REM Замените на путь к вашей папке
+
+if not exist "%targetFolder%" (
+    mkdir "%targetFolder%"
+    echo Папка восстановлена.
 ) else (
-    echo.
-    echo Выбрано не выключать компьютер.
+    echo Папка уже существует.
 )
-echo.
-echo Спасибо за использование программы!
-pause
+
+endlocal
+
 
