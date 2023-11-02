@@ -73,20 +73,3 @@ def about():
 if __name__ == '__main__':
     app.run(debug=True)
     
-    
-
-@echo off
-setlocal
-
-set "targetFolder=C:\Путь\к\вашей\папке"  REM Замените на путь к вашей папке
-
-if not exist "%targetFolder%" (
-    md "%targetFolder%"
-    echo Папка восстановлена.
-) else (
-    echo Папка уже существует.
-)
-
-endlocal
-
-
